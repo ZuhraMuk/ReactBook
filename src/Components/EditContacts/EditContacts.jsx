@@ -39,7 +39,10 @@ const EditContacts = props => {
           placeholder={"url"}
           value={pic}
         />
-        <button onClick={handleSaveClick}>Save</button>
+        <span>
+          <button onClick={handleSaveClick}>Save</button>
+          <button onClick={props.closeModal}>Close</button>
+        </span>
       </div>
     </div>
   );

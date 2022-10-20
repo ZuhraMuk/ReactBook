@@ -52,6 +52,10 @@ const App = () => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
 
+  function closeModal() {
+    setIsEdit(false);
+  }
+
   return (
     <>
       <AddContact handleNewContact={handleNewContact} />
@@ -59,6 +63,7 @@ const App = () => {
         <EditContacts
           editContact={editContact}
           handleSaveEditedContact={handleSaveEditedContact}
+          closeModal={closeModal}
         />
       ) : null}
       <ContactsList
