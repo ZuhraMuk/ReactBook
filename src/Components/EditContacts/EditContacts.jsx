@@ -19,26 +19,28 @@ const EditContacts = props => {
   }
 
   return (
-    <div className="inpAdd">
-      <input
-        onChange={e => setName(e.target.value)}
-        type={"text"}
-        placeholder={"Имя"}
-        value={name}
-      />
-      <input
-        onChange={e => setEmail(e.target.value)}
-        type={"email"}
-        placeholder={"email"}
-        value={email}
-      />
-      <input
-        onChange={e => setPic(e.target.value)}
-        type={"url"}
-        placeholder={"url"}
-        value={pic}
-      />
-      <button onClick={handleSaveClick}>Save</button>
+    <div id="inpAdd">
+      <div id="inpModal">
+        <input
+          onChange={e => setName(e.target.value)}
+          type={"text"}
+          placeholder={"Имя"}
+          value={name}
+        />
+        <input
+          onChange={e => setEmail(e.target.value)}
+          type={"email"}
+          placeholder={"email"}
+          value={email}
+        />
+        <input
+          onChange={e => setPic(e.target.value)}
+          type={"url"}
+          placeholder={"url"}
+          value={pic}
+        />
+        <button onClick={handleSaveClick}>Save</button>
+      </div>
     </div>
   );
 };
