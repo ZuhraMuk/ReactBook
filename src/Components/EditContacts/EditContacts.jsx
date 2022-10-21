@@ -7,6 +7,10 @@ const EditContacts = props => {
   const [pic, setPic] = useState(props.editContact.pic);
 
   function handleSaveClick() {
+    if (!name.trim() || !email.trim() || !pic.trim()) {
+      alert("Заполните поля!!!");
+      return;
+    }
     let contact = { ...props.editContact };
     contact.name = name;
     contact.email = email;

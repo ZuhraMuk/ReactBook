@@ -7,6 +7,10 @@ const AddContact = props => {
   const [pic, setPic] = useState("");
 
   function handleClick() {
+    if (!name.trim() || !email.trim() || !pic.trim()) {
+      alert("Заполните поля!!!");
+      return;
+    }
     let newContact = {
       name,
       email,
